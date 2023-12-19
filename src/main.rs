@@ -1,10 +1,12 @@
-use std::{fs::File, io::Read};
+use std::{fs::File, io::Read, collections::HashMap};
 use cbs::Graph;
 
 use map::{xml_to_graph, EdgeData, NodeData};
 use agv::json_to_agv;
+use input::json_to_input;
 use world::SimpleState;
 
+mod input;
 mod map;
 mod agv;
 mod world;
@@ -29,6 +31,7 @@ fn read_from_file(filename: &str) -> Result<String, std::io::Error> {
 
 struct Model {
     graph: Arc<Graph<NodeData, EdgeData>>,
+    mapping: HashMap<GraphNodeId, usize>,
     solution:
         Option<Vec<Solution<Arc<SippState<SimpleState, MyTime>>, GraphEdgeId, MyTime, MyTime>>>,
     start_time: f32,
@@ -48,7 +51,7 @@ fn main() {
 
 fn get_model() -> Model {
     let filename = "resources/map.xml";
-    let graph = xml_to_graph(&read_from_file(filename).unwrap());
+    let (graph, mapping, inverse_mapping) = xml_to_graph(&read_from_file(filename).unwrap());
     let graph = Arc::new(graph);
 
     let limits = (0..graph.num_nodes())
@@ -71,14 +74,16 @@ fn get_model() -> Model {
 
     let transition_system = Arc::new(SimpleWorld::new(graph.clone(), agv));
 
+    let filename = "resources/input.json";
+    let input = json_to_input(&read_from_file(filename).unwrap());
     let mut tasks = vec![];
-    for (from, to) in vec![
-        (1, 40), (40, 41)
-    ]
+    for (from, to) in input.tasks.iter().map(|t| (t.start_id, t.goal_id))
     {
+        let from = mapping[&from];
+        let to = mapping[&to];
         tasks.push(Arc::new(Task::new(
-            SimpleState(GraphNodeId(from)),
-            SimpleState(GraphNodeId(to)),
+            SimpleState(from),
+            SimpleState(to),
             OrderedFloat(0.0),
         )));
     }
@@ -125,6 +130,7 @@ fn get_model() -> Model {
 
     Model {
         graph,
+        mapping: inverse_mapping,
         solution,
         start_time: 0.0,
         colors,
@@ -157,12 +163,12 @@ fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
     draw.background().color(WHITE);
 
-    let size = model.window.w().min(model.window.h());
     let to_coordinate = |node: GraphNodeId| {
         let node = model.graph.get_node(node);
+        // map node coordinates to window coordinates
         vec2(
-            ((node.data.x - model.limits.0.0) / (model.limits.1.0 - model.limits.0.0)) * size - size / 2.0,
-            ((node.data.y - model.limits.0.1) / (model.limits.1.1 - model.limits.0.1)) * size - size / 2.0,
+            (node.data.x - (model.limits.0.0 + model.limits.1.0) / 2.0) * model.scale,
+            (node.data.y - (model.limits.0.1 + model.limits.1.1) / 2.0) * model.scale,
         )
     };
 
@@ -172,7 +178,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
             .color(BLACK)
             .radius(2.0)
             .xy(to_coordinate(GraphNodeId(id)));
-        draw.text(id.to_string().as_str())
+        draw.text(model.mapping[&GraphNodeId(id)].to_string().as_str())
             .color(BLACK)
             .font_size(14)
             .align_text_middle_y()

@@ -174,7 +174,6 @@ dependencies = [
 [[package]]
 name = "cbs"
 version = "0.1.0"
-source = "git+https://github.com/vcoppe/cbs.git#71f64c6b94ac6eb56fbdc3b51b69e25e2dbe431b"
 dependencies = [
  "fxhash",
  "ncollide2d",
