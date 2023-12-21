@@ -1,0 +1,14 @@
+{
+    "tasks": [
+        {
+            "agent": 0,
+            "startId": 0,
+            "goalId": 1
+        },
+        {
+            "agent": 1,
+            "startId": 2,
+            "goalId": 3
+        }
+    ]
+}

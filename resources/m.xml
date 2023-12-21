@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+  <nodes>
+    <node id="0">
+      <nodePosition>
+        <x>0</x>
+        <y>0</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="1">
+      <nodePosition>
+        <x>1</x>
+        <y>0</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="2">
+      <nodePosition>
+        <x>0</x>
+        <y>1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="3">
+      <nodePosition>
+        <x>1</x>
+        <y>1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="4">
+      <nodePosition>
+        <x>0</x>
+        <y>2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="5">
+      <nodePosition>
+        <x>1</x>
+        <y>2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="6">
+      <nodePosition>
+        <x>0</x>
+        <y>3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+    <node id="7">
+      <nodePosition>
+        <x>1</x>
+        <y>3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+      </nodePosition>
+    </node>
+  </nodes>
+  <edges>
+    <edge id="0">
+      <startNodeId>0</startNodeId>
+      <endNodeId>2</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>2</startNodeId>
+      <endNodeId>4</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>4</startNodeId>
+      <endNodeId>5</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>5</startNodeId>
+      <endNodeId>3</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>3</startNodeId>
+      <endNodeId>1</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>5</startNodeId>
+      <endNodeId>7</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>7</startNodeId>
+      <endNodeId>6</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+    <edge id="0">
+      <startNodeId>6</startNodeId>
+      <endNodeId>4</endNodeId>
+      <maxSpeed>1</maxSpeed>
+      <length>1</length>
+      <maxHeight>2.2</maxHeight>
+      <rotationAllowed>true</rotationAllowed>
+    </edge>
+  </edges>
+</map>
