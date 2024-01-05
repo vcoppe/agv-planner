@@ -37,8 +37,6 @@ struct Model {
     start_time: f32,
     colors: Vec<rgb::Rgb<nannou::color::encoding::Srgb, u8>>,
     limits: ((f32, f32), (f32, f32)),
-    scale: f32,
-    window: Rect,
 }
 
 fn main() {
@@ -134,9 +132,7 @@ fn get_model() -> Model {
         solution,
         start_time: 0.0,
         colors,
-        scale: 10.0,
         limits,
-        window: Rect::from_w_h(1000.0, 1000.0),
     }
 }
 
@@ -147,11 +143,6 @@ fn model(app: &App) -> Model {
         .view(view)
         .build()
         .unwrap();
-
-    let window = app.window_rect().pad(50.0);
-    model.scale = (window.w() / (model.limits.1.0 - model.limits.0.0)).min(window.h() / (model.limits.1.1 - model.limits.0.1));
-    model.window = window;
-
     model.start_time = app.time;
 
     model
@@ -163,12 +154,15 @@ fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
     draw.background().color(WHITE);
 
+    let window = app.window_rect().pad(50.0);
+    let scale = (window.w() / (model.limits.1.0 - model.limits.0.0)).min(window.h() / (model.limits.1.1 - model.limits.0.1));
+
     let to_coordinate = |node: GraphNodeId| {
         let node = model.graph.get_node(node);
         // map node coordinates to window coordinates
         vec2(
-            (node.data.x - (model.limits.0.0 + model.limits.1.0) / 2.0) * model.scale,
-            (node.data.y - (model.limits.0.1 + model.limits.1.1) / 2.0) * model.scale,
+            (node.data.x - (model.limits.0.0 + model.limits.1.0) / 2.0) * scale,
+            (node.data.y - (model.limits.0.1 + model.limits.1.1) / 2.0) * scale,
         )
     };
 
@@ -182,7 +176,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
             .color(BLACK)
             .font_size(14)
             .align_text_middle_y()
-            .xy(to_coordinate(GraphNodeId(id)) + vec2(model.scale, model.scale) / 4.0);
+            .xy(to_coordinate(GraphNodeId(id)) + vec2(scale, scale) / 4.0);
     }
 
     for id in 0..model.graph.num_edges() {
@@ -224,7 +218,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
 
                 draw.ellipse()
                     .color(model.colors[agent])
-                    .radius(0.4 * model.scale)
+                    .radius(0.4 * scale)
                     .xy(center);
                 draw.text(agent.to_string().as_str())
                     .color(WHITE)
@@ -239,7 +233,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
             let center = to_coordinate(solution.steps.last().unwrap().0.internal_state.0);
             draw.ellipse()
                 .color(model.colors[agent])
-                .radius(0.4 * model.scale)
+                .radius(0.4 * scale)
                 .xy(center);
             draw.text(agent.to_string().as_str())
                 .color(WHITE)
