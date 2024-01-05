@@ -3,12 +3,37 @@
         {
             "agent": 0,
             "startId": 0,
-            "goalId": 1
+            "goalId": 9
         },
         {
             "agent": 1,
+            "startId": 9,
+            "goalId": 0
+        },
+        {
+            "agent": 2,
+            "startId": 1,
+            "goalId": 8
+        },
+        {
+            "agent": 3,
+            "startId": 8,
+            "goalId": 1
+        },
+        {
+            "agent": 4,
             "startId": 2,
-            "goalId": 3
+            "goalId": 7
+        },
+        {
+            "agent": 5,
+            "startId": 7,
+            "goalId": 2
+        },
+        {
+            "agent": 6,
+            "startId": 3,
+            "goalId": 6
         }
     ]
 }
