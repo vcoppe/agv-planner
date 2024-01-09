@@ -106,7 +106,7 @@ fn get_model() -> Model {
             .collect(),
     );
 
-    let config = CbsConfig::new(tasks, pivots, heuristic_to_pivots, OrderedFloat(1e-6));
+    let config = CbsConfig::new(tasks, pivots, heuristic_to_pivots, OrderedFloat(1e-6), None);
 
     let mut cbs = ConflictBasedSearch::new(transition_system);
 

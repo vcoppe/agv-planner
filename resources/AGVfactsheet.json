@@ -1,0 +1,354 @@
+{
+  "timestamp": "DT#2023-11-17-11:41:32",
+  "manufacturer": "ATI",
+  "serialNumber": "202",
+  "typeSpecification": {
+    "seriesName": "WH4.0",
+    "seriesDescription": "Agv capable of moving into storage racks.",
+    "agvKinematic": "OMNI",
+    "agvClass": "CARRIER",
+    "maxLoadMass": 1500,
+    "localizationTypes": [
+      "REFLECTOR",
+      "DMC"
+    ],
+    "navigationTypes": [
+      "VIRTUAL_LINE_GUIDED"
+    ]
+  },
+  "physicalParameters": {
+    "speedMin": 0.001,
+    "speedMax": 1.5,
+    "accelerationMax": 0.75,
+    "decelerationMax": 1,
+    "heightMin": 0.25,
+    "heightMax": 0.3,
+    "width": 1,
+    "length": 1.2
+  },
+  "protocolLimits": {
+    "maxStringLens": {
+      "msgLen": 60000,
+      "topicSerialLen": 4,
+      "topicElemLen": 150,
+      "idLen": 4,
+      "idNumericalOnly": true,
+      "enumLen": 150,
+      "loadIdLen": 4
+    },
+    "maxArrayLens": {
+      "order.nodes": 50,
+      "order.edges": 50,
+      "node.actions": 5,
+      "edge.actions": 5,
+      "actions.actionsParameters": 4,
+      "instantActions": 5,
+      "state.nodeStates": 100,
+      "state.edgeStates": 100,
+      "state.loads": 1,
+      "state.actionStates": 1010,
+      "state.errors": 10,
+      "state.informations": 10,
+      "error.errorReferences": 5,
+      "informations.infoReferences": 4
+    },
+    "timing": {
+      "minOrderInterval": 10,
+      "minStateInterval": 5,
+      "defaultStateInterval": 30,
+      "visualizationInterval": 1
+    }
+  },
+  "protocolFeatures": {
+    "optionalParameters": [
+      {
+        "parameter": "order.nodes.nodePosition.theta",
+        "support": "SUPPORTED"
+      },
+      {
+        "parameter": "order.nodes.nodePosition.allowedDeviationXY",
+        "support": "SUPPORTED",
+        "description": "Defines the shape of the turn using a Bezier curve."
+      },
+      {
+        "parameter": "order.edges.maxSpeed",
+        "support": "REQUIRED",
+        "description": "Must be communicated to the AGV as this is its reference speed for all calculations."
+      },
+      {
+        "parameter": "oder.edges.orientation",
+        "support": "SUPPORTED"
+      },
+      {
+        "parameter": "oder.edges.orientationType",
+        "support": "SUPPORTED"
+      },
+      {
+        "parameter": "oder.edges.rotationAllowed",
+        "support": "SUPPORTED"
+      }
+    ],
+    "agvActions": [
+      {
+        "actionType": "startPause",
+        "actionScopes": [
+          "INSTANT"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "stopPause",
+        "actionScopes": [
+          "INSTANT"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "startCharging",
+        "actionScopes": [
+          "INSTANT",
+          "NODE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "stopCharging",
+        "actionScopes": [
+          "INSTANT",
+          "NODE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "initPosition",
+        "actionScopes": [
+          "INSTANT",
+          "NODE"
+        ],
+        "actionParameters": [
+          {
+            "key": "positionX",
+            "valueDataType": "FLOAT",
+            "description": "X coordinate of positioning.",
+            "isOptional": false
+          },
+          {
+            "key": "positionY",
+            "valueDataType": "FLOAT",
+            "description": "Y coordinate of positioning.",
+            "isOptional": false
+          },
+          {
+            "key": "theta",
+            "valueDataType": "FLOAT",
+            "description": "Positioning orientation.",
+            "isOptional": false
+          },
+          {
+            "key": "mapId",
+            "valueDataType": "INTEGER",
+            "description": "Name of the map to be used for positioning.",
+            "isOptional": true
+          }
+        ]
+      },
+      {
+        "actionType": "stateRequest",
+        "actionScopes": [
+          "INSTANT"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "logReport",
+        "actionScopes": [],
+        "actionParameters": []
+      },
+      {
+        "actionType": "pick",
+        "actionScopes": [
+          "INSTANT",
+          "NODE",
+          "EDGE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "drop",
+        "actionScopes": [
+          "INSTANT",
+          "NODE",
+          "EDGE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "finePositioning",
+        "actionScopes": [
+          "NODE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "waitForTrigger",
+        "actionScopes": [
+          "INSTANT",
+          "NODE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "cancelOrder",
+        "actionScopes": [
+          "INSTANT"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "factsheetRequest",
+        "actionScopes": [
+          "INSTANT"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "cameraPositioning",
+        "actionScopes": [
+          "NODE"
+        ],
+        "actionParameters": [
+          {
+            "key": "stationId",
+            "valueDataType": "INTEGER",
+            "description": "Id of the station to identify with camera.",
+            "isOptional": true
+          }
+        ]
+      },
+      {
+        "actionType": "goStraight",
+        "actionScopes": [
+          "EDGE"
+        ],
+        "actionParameters": [
+          {
+            "key": "referenceAngle",
+            "valueDataType": "FLOAT",
+            "description": "Angle to be followed by the agv. 0 = Forward; PI = Reverse.",
+            "isOptional": true
+          }
+        ]
+      },
+      {
+        "actionType": "takePicture",
+        "actionScopes": [
+          "INSTANT",
+          "NODE"
+        ],
+        "actionParameters": []
+      },
+      {
+        "actionType": "spare17",
+        "actionScopes": [],
+        "actionParameters": []
+      },
+      {
+        "actionType": "spare18",
+        "actionScopes": [],
+        "actionParameters": []
+      },
+      {
+        "actionType": "spare19",
+        "actionScopes": [],
+        "actionParameters": []
+      },
+      {
+        "actionType": "spare20",
+        "actionScopes": [],
+        "actionParameters": []
+      }
+    ]
+  },
+  "agvGeometry": {
+    "wheelDefinitions": [
+      {
+        "type": "MECANUM",
+        "isActiveDriven": true,
+        "isActiveSteered": false,
+        "position": {
+          "x": 0.5,
+          "y": 0.5,
+          "theta": 0
+        },
+        "diameter": 100000,
+        "width": 0.1
+      },
+      {
+        "type": "MECANUM",
+        "isActiveDriven": true,
+        "isActiveSteered": false,
+        "position": {
+          "x": -0.5,
+          "y": 0.5,
+          "theta": 0
+        },
+        "diameter": 100000,
+        "width": 0.1
+      },
+      {
+        "type": "MECANUM",
+        "isActiveDriven": true,
+        "isActiveSteered": false,
+        "position": {
+          "x": -0.5,
+          "y": -0.5,
+          "theta": 0
+        },
+        "diameter": 100000,
+        "width": 0.1
+      },
+      {
+        "type": "MECANUM",
+        "isActiveDriven": true,
+        "isActiveSteered": false,
+        "position": {
+          "x": 0.5,
+          "y": -0.5,
+          "theta": 0
+        },
+        "diameter": 100000,
+        "width": 0.1
+      }
+    ],
+    "envelopes2d": [],
+    "envelopes3d": []
+  },
+  "loadSpecification": {
+    "loadPositions": [
+      "LHD1"
+    ],
+    "loadSets": [
+      {
+        "setName": "DEFAULT",
+        "loadType": "EPAL1",
+        "maxWeight": 1500,
+        "agvSpeedLimit": 1.2,
+        "agvAccelerationLimit": 0.75,
+        "agvDecelerationLimit": 0.75,
+        "pickTime": 8.5,
+        "dropTime": 8.5
+      },
+      {
+        "setName": "CONTAINER",
+        "loadType": "EUR2",
+        "maxWeight": 1500,
+        "agvSpeedLimit": 1.2,
+        "agvAccelerationLimit": 0.75,
+        "agvDecelerationLimit": 0.75,
+        "pickTime": 8.5,
+        "dropTime": 8.5
+      }
+    ]
+  },
+  "localizationParameters": {}
+}

@@ -1,0 +1,2293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map>
+  <walls />
+  <reflectors />
+  <stationTypes>
+	<stationType id ="ChargingWH04">
+		<name>"chargingStation"</name>
+		<icon>"charger.png"</icon>
+		<agvTypes>
+			<typeId>"WH04"</typeId>
+		</agvTypes>
+		<loadTypes />
+		<actions>
+			<action type ="startCharging">
+				<blockingType>"HARD"</blockingType>
+			</action>
+		</actions>
+	</stationType>
+	  <stationType id ="RackWH04">
+		  <name>"loadStation"</name>
+		  <icon>"load.png"</icon>
+		  <agvTypes>
+			  <typeId>"WH04"</typeId>
+		  </agvTypes>
+		  <loadTypes>
+			  <typeId>"euro"</typeId>
+		  </loadTypes>
+		  <actions>
+			  <action type ="pick">
+				  <blockingType>"HARD"</blockingType>
+			  </action>
+			  <action type ="drop">
+				  <blockingType>"HARD"</blockingType>
+			  </action>
+		  </actions>
+	  </stationType>
+  </stationTypes>
+  <nodes>
+    <node id="112">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>1</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="113">
+	  <station type = "RackWH04">"111"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>1</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="114">
+	  <station type = "RackWH04">"112"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>1</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="115">
+	  <station type = "RackWH04">"113"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>1</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="116">
+	  <station type = "RackWH04">"123"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="117">
+	  <station type = "RackWH04">"122"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="118">
+	  <station type = "RackWH04">"121"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="119">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="120">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="121">
+	  <station type = "RackWH04">"131"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="122">
+	  <station type = "RackWH04">"132"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="123">
+	  <station type = "RackWH04">"133"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="124">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>1</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="125">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="126">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="127">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>-1</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="128">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>-1</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="129">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>7</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="130">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>7</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="131">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="132">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>7</x>
+        <y>3.5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="133">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>7</x>
+        <y>5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="134">
+	  <parkingAllowed>true</parkingAllowed>
+      <nodePosition>
+        <x>8.5</x>
+        <y>5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="135">
+      <parkingAllowed>true</parkingAllowed>
+      <nodePosition>
+        <x>8.5</x>
+        <y>3.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="136">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="137">
+      <station type = "ChargingWH04">"ChargingStationWH04_1"</station>
+	  <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>3.5</x>
+        <y>5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="138">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>3.5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="139">
+      <parkingAllowed>true</parkingAllowed>
+      <nodePosition>
+        <x>3.5</x>
+        <y>3.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="140">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>5</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="141">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>9</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="142">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>9</x>
+        <y>1</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="143">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>7</x>
+        <y>1</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="144">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>10</x>
+        <y>0.5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="145">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>11</x>
+        <y>0.5</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="146">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>13</x>
+        <y>1</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="147">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>13</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="148">
+      <parkingAllowed>true</parkingAllowed>
+      <nodePosition>
+        <x>-2.5</x>
+        <y>2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="149">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="150">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>15</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="151">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="152">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="153">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>13</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="154">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="155">
+	  <station type = "RackWH04">"231"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="156">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="157">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>21</x>
+        <y>1</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="158">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>15</x>
+        <y>-0.5</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="159">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>21</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="160">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="161">
+	  <station type = "RackWH04">"232"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="162">
+	  <station type = "RackWH04">"223"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="163">
+	  <station type = "RackWH04">"221"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="164">
+	  <station type = "RackWH04">"211"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>15</x>
+        <y>-1</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="165">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>21</x>
+        <y>2</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="166">
+	  <station type = "RackWH04">"222"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>17</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="167">
+	  <station type = "RackWH04">"212"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>15</x>
+        <y>-2</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="168">
+	  <station type = "RackWH04">"213"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>15</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="169">
+	  <station type = "RackWH04">"233"</station>
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>19</x>
+        <y>-3</y>
+        <allowedDeviationXY>0</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="170">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>12</x>
+        <y>1</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+    <node id="171">
+      <parkingAllowed>false</parkingAllowed>
+      <nodePosition>
+        <x>12</x>
+        <y>0</y>
+        <allowedDeviationXY>0.5</allowedDeviationXY>
+        <mapId>2074</mapId>
+      </nodePosition>
+      <actions />
+    </node>
+  </nodes>
+  <edges>
+    <edge id="1">
+      <startNodeId>112</startNodeId>
+      <endNodeId>113</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="2">
+      <startNodeId>112</startNodeId>
+      <endNodeId>124</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="3">
+      <startNodeId>113</startNodeId>
+      <endNodeId>112</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="4">
+      <startNodeId>113</startNodeId>
+      <endNodeId>114</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="5">
+      <startNodeId>114</startNodeId>
+      <endNodeId>113</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="6">
+      <startNodeId>114</startNodeId>
+      <endNodeId>115</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="7">
+      <startNodeId>115</startNodeId>
+      <endNodeId>114</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="8">
+      <startNodeId>116</startNodeId>
+      <endNodeId>117</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="9">
+      <startNodeId>117</startNodeId>
+      <endNodeId>116</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="10">
+      <startNodeId>117</startNodeId>
+      <endNodeId>118</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="11">
+      <startNodeId>118</startNodeId>
+      <endNodeId>117</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="12">
+      <startNodeId>118</startNodeId>
+      <endNodeId>119</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="13">
+      <startNodeId>119</startNodeId>
+      <endNodeId>118</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="14">
+      <startNodeId>119</startNodeId>
+      <endNodeId>125</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="15">
+      <startNodeId>120</startNodeId>
+      <endNodeId>121</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="16">
+      <startNodeId>120</startNodeId>
+      <endNodeId>126</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="17">
+      <startNodeId>121</startNodeId>
+      <endNodeId>120</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="18">
+      <startNodeId>121</startNodeId>
+      <endNodeId>122</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="19">
+      <startNodeId>122</startNodeId>
+      <endNodeId>121</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="20">
+      <startNodeId>122</startNodeId>
+      <endNodeId>123</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="21">
+      <startNodeId>123</startNodeId>
+      <endNodeId>122</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="22">
+      <startNodeId>124</startNodeId>
+      <endNodeId>112</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="23">
+      <startNodeId>124</startNodeId>
+      <endNodeId>125</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="24">
+      <startNodeId>125</startNodeId>
+      <endNodeId>119</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="25">
+      <startNodeId>125</startNodeId>
+      <endNodeId>126</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="26">
+      <startNodeId>126</startNodeId>
+      <endNodeId>120</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="27">
+      <startNodeId>126</startNodeId>
+      <endNodeId>130</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="28">
+      <startNodeId>127</startNodeId>
+      <endNodeId>124</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="29">
+      <startNodeId>128</startNodeId>
+      <endNodeId>127</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="30">
+      <startNodeId>128</startNodeId>
+      <endNodeId>148</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="31">
+      <startNodeId>129</startNodeId>
+      <endNodeId>132</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="32">
+      <startNodeId>129</startNodeId>
+      <endNodeId>140</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="33">
+      <startNodeId>130</startNodeId>
+      <endNodeId>141</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="34">
+      <startNodeId>130</startNodeId>
+      <endNodeId>143</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="35">
+      <startNodeId>131</startNodeId>
+      <endNodeId>125</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="36">
+      <startNodeId>131</startNodeId>
+      <endNodeId>128</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>4</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="37">
+      <startNodeId>132</startNodeId>
+      <endNodeId>133</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="38">
+      <startNodeId>132</startNodeId>
+      <endNodeId>135</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="39">
+      <startNodeId>133</startNodeId>
+      <endNodeId>134</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="40">
+      <startNodeId>133</startNodeId>
+      <endNodeId>136</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="41">
+      <startNodeId>134</startNodeId>
+      <endNodeId>133</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="42">
+      <startNodeId>135</startNodeId>
+      <endNodeId>132</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="43">
+      <startNodeId>136</startNodeId>
+      <endNodeId>137</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="44">
+      <startNodeId>136</startNodeId>
+      <endNodeId>138</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="45">
+      <startNodeId>137</startNodeId>
+      <endNodeId>136</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="46">
+      <startNodeId>138</startNodeId>
+      <endNodeId>139</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="47">
+      <startNodeId>138</startNodeId>
+      <endNodeId>140</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="48">
+      <startNodeId>139</startNodeId>
+      <endNodeId>138</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="49">
+      <startNodeId>140</startNodeId>
+      <endNodeId>131</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="50">
+      <startNodeId>141</startNodeId>
+      <endNodeId>144</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.118034</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="51">
+      <startNodeId>142</startNodeId>
+      <endNodeId>143</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="52">
+      <startNodeId>143</startNodeId>
+      <endNodeId>129</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="53">
+      <startNodeId>144</startNodeId>
+      <endNodeId>142</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.118034</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="54">
+      <startNodeId>144</startNodeId>
+      <endNodeId>145</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="55">
+      <startNodeId>145</startNodeId>
+      <endNodeId>144</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="56">
+      <startNodeId>145</startNodeId>
+      <endNodeId>171</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.118034</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="57">
+      <startNodeId>146</startNodeId>
+      <endNodeId>147</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="58">
+      <startNodeId>146</startNodeId>
+      <endNodeId>170</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="59">
+      <startNodeId>147</startNodeId>
+      <endNodeId>150</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="60">
+      <startNodeId>148</startNodeId>
+      <endNodeId>128</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="61">
+      <startNodeId>149</startNodeId>
+      <endNodeId>151</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="62">
+      <startNodeId>149</startNodeId>
+      <endNodeId>163</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="63">
+      <startNodeId>150</startNodeId>
+      <endNodeId>151</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="64">
+      <startNodeId>150</startNodeId>
+      <endNodeId>158</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="65">
+      <startNodeId>151</startNodeId>
+      <endNodeId>149</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="66">
+      <startNodeId>151</startNodeId>
+      <endNodeId>152</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="67">
+      <startNodeId>151</startNodeId>
+      <endNodeId>154</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="68">
+      <startNodeId>152</startNodeId>
+      <endNodeId>153</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>4</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="69">
+      <startNodeId>153</startNodeId>
+      <endNodeId>146</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="70">
+      <startNodeId>154</startNodeId>
+      <endNodeId>156</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="71">
+      <startNodeId>154</startNodeId>
+      <endNodeId>159</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="72">
+      <startNodeId>155</startNodeId>
+      <endNodeId>156</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="73">
+      <startNodeId>155</startNodeId>
+      <endNodeId>161</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="74">
+      <startNodeId>156</startNodeId>
+      <endNodeId>154</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="75">
+      <startNodeId>156</startNodeId>
+      <endNodeId>155</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="76">
+      <startNodeId>157</startNodeId>
+      <endNodeId>165</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="77">
+      <startNodeId>158</startNodeId>
+      <endNodeId>150</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="78">
+      <startNodeId>158</startNodeId>
+      <endNodeId>164</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="79">
+      <startNodeId>159</startNodeId>
+      <endNodeId>157</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="80">
+      <startNodeId>160</startNodeId>
+      <endNodeId>152</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="81">
+      <startNodeId>161</startNodeId>
+      <endNodeId>155</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="82">
+      <startNodeId>161</startNodeId>
+      <endNodeId>169</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="83">
+      <startNodeId>162</startNodeId>
+      <endNodeId>166</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="84">
+      <startNodeId>163</startNodeId>
+      <endNodeId>149</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>0.5</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="85">
+      <startNodeId>163</startNodeId>
+      <endNodeId>166</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="86">
+      <startNodeId>164</startNodeId>
+      <endNodeId>158</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="87">
+      <startNodeId>164</startNodeId>
+      <endNodeId>167</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="88">
+      <startNodeId>165</startNodeId>
+      <endNodeId>160</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>2</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="89">
+      <startNodeId>166</startNodeId>
+      <endNodeId>162</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="90">
+      <startNodeId>166</startNodeId>
+      <endNodeId>163</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="91">
+      <startNodeId>167</startNodeId>
+      <endNodeId>164</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="92">
+      <startNodeId>167</startNodeId>
+      <endNodeId>168</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="93">
+      <startNodeId>168</startNodeId>
+      <endNodeId>167</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="94">
+      <startNodeId>169</startNodeId>
+      <endNodeId>161</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="95">
+      <startNodeId>170</startNodeId>
+      <endNodeId>145</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1.118034</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+    <edge id="96">
+      <startNodeId>171</startNodeId>
+      <endNodeId>147</endNodeId>
+      <maxSpeed>1.2</maxSpeed>
+      <maxHeight>2.2</maxHeight>
+      <agvTypes>
+        <typeId>WH04</typeId>
+      </agvTypes>
+      <loadTypes>
+        <typeId>euroPalette</typeId>
+      </loadTypes>
+      <orientation>0</orientation>
+      <rotationAllowed>true</rotationAllowed>
+      <length>1</length>
+      <mapId>2074</mapId>
+      <actions />
+    </edge>
+  </edges>
+</map>
