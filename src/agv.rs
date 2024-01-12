@@ -11,19 +11,19 @@ pub struct AGV {
 #[derive(Debug, Deserialize)]
 pub struct PhysicalParameters {
     #[serde(rename = "speedMin")]
-    pub speed_min: f32,
+    pub speed_min: f64,
     #[serde(rename = "speedMax")]
-    pub speed_max: f32,
+    pub speed_max: f64,
     #[serde(rename = "accelerationMax")]
-    pub acceleration_max: f32,
+    pub acceleration_max: f64,
     #[serde(rename = "decelerationMax")]
-    pub deceleration_max: f32,
+    pub deceleration_max: f64,
     #[serde(rename = "heightMin")]
-    pub height_min: f32,
+    pub height_min: f64,
     #[serde(rename = "heightMax")]
-    pub height_max: f32,
-    pub width: f32,
-    pub length: f32,
+    pub height_max: f64,
+    pub width: f64,
+    pub length: f64,
 }
 
 pub fn json_to_agv(json: &str) -> AGV {

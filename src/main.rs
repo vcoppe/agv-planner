@@ -61,8 +61,8 @@ fn get_model() -> Model {
             ((f32::MAX, f32::MAX), (f32::MIN, f32::MIN)),
             |((min_x, min_y), (max_x, max_y)), (x, y)| {
                 (
-                    (min_x.min(x), min_y.min(y)),
-                    (max_x.max(x), max_y.max(y)),
+                    (min_x.min(x as f32), min_y.min(y as f32)),
+                    (max_x.max(x as f32), max_y.max(y as f32)),
                 )
             },
         );
@@ -161,8 +161,8 @@ fn view(app: &App, model: &Model, frame: Frame) {
         let node = model.graph.get_node(node);
         // map node coordinates to window coordinates
         vec2(
-            (node.data.x - (model.limits.0.0 + model.limits.1.0) / 2.0) * scale,
-            (node.data.y - (model.limits.0.1 + model.limits.1.1) / 2.0) * scale,
+            (node.data.x as f32 - (model.limits.0.0 + model.limits.1.0) / 2.0) * scale,
+            (node.data.y as f32 - (model.limits.0.1 + model.limits.1.1) / 2.0) * scale,
         )
     };
 
@@ -189,7 +189,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
 
     // Draw agents
     let elapsed = app.time - model.start_time;
-    let mut current_time = OrderedFloat(elapsed);
+    let mut current_time = OrderedFloat(elapsed as f64);
 
     let solutions = model.solution.as_ref().unwrap();
 
@@ -211,10 +211,10 @@ fn view(app: &App, model: &Model, frame: Frame) {
                 let to = to_coordinate(solution.steps[i + 1].0.internal_state.0);
 
                 let delta = to - from;
-                let progress_time = current_time - solution.steps[i].1;
+                let progress_time = (current_time - solution.steps[i].1).0 as f32;
                 let move_time = solution.steps[i + 1].1 - solution.steps[i].1;
-                let vel = delta / move_time.0;
-                let center = from + vel * progress_time.0;
+                let vel = delta / move_time.0 as f32;
+                let center = from + vel * progress_time;
 
                 draw.ellipse()
                     .color(model.colors[agent])

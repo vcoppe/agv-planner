@@ -7,16 +7,16 @@ use quick_xml::de::{from_str, DeError};
 #[derive(Debug)]
 pub struct NodeData
 {
-    pub x: f32,
-    pub y: f32,
-    pub deviation: f32,
+    pub x: f64,
+    pub y: f64,
+    pub deviation: f64,
 }
 
 #[derive(Debug)]
 pub struct EdgeData
 {
-    pub length: f32,
-    pub max_speed: f32,
+    pub length: f64,
+    pub max_speed: f64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -42,10 +42,10 @@ struct Node {
 
 #[derive(Debug, Deserialize)]
 struct NodePosition {
-    x: f32,
-    y: f32,
+    x: f64,
+    y: f64,
     #[serde(rename = "allowedDeviationXY")]
-    allowed_deviation_xy: f32,
+    allowed_deviation_xy: f64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -63,12 +63,12 @@ struct Edge {
     #[serde(rename = "endNodeId")]
     end_node_id: usize,
     #[serde(rename = "maxSpeed")]
-    max_speed: f32,
+    max_speed: f64,
     #[serde(rename = "maxHeight")]
-    max_height: f32,
+    max_height: f64,
     #[serde(rename = "rotationAllowed")]
     rotation_allowed: bool,
-    length: f32,
+    length: f64,
 }
 
 pub fn xml_to_graph(xml: &str) -> (Graph<NodeData, EdgeData>, HashMap<usize, GraphNodeId>, HashMap<GraphNodeId, usize>) {

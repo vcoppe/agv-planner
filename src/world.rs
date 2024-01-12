@@ -20,7 +20,7 @@ pub struct SimpleWorld {
 }
 
 impl SimpleWorld {
-    const BALL: Ball<f32> = Ball { radius: 0.4 };
+    const BALL: Ball<f64> = Ball { radius: 0.4 };
 
     pub fn new(graph: Arc<Graph<NodeData, EdgeData>>, agv: AGV) -> Self {
         Self { graph, agv }
@@ -43,7 +43,7 @@ impl SimpleWorld {
         &self,
         m: &Move<SimpleState, GraphEdgeId, MyTime>,
         initial_time: &MyTime,
-    ) -> (Point2<f32>, Vector2<f32>) {
+    ) -> (Point2<f64>, Vector2<f64>) {
         let interval = &m.interval;
         let from = &self.graph.get_node(m.from.0).data;
         let to = &self.graph.get_node(m.to.0).data;
