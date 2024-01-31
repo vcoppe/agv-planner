@@ -1,5 +1,4 @@
 use std::{fs::File, io::Read, collections::HashMap};
-use cbs::Graph;
 
 use map::{xml_to_graph, EdgeData, NodeData};
 use agv::json_to_agv;
@@ -13,9 +12,8 @@ mod world;
 
 use std::{sync::Arc, time::Instant};
 
-use cbs::{
-    CbsConfig, ConflictBasedSearch, GraphEdgeId, GraphNodeId, MyTime, ReverseResumableAStar, SippState, Solution,
-    Task,
+use caboose::{
+    CbsConfig, ConflictBasedSearch, Graph, GraphEdgeId, GraphNodeId, MyTime, SippState, Solution, Task
 };
 use nannou::prelude::*;
 use ordered_float::OrderedFloat;
@@ -33,7 +31,7 @@ struct Model {
     graph: Arc<Graph<NodeData, EdgeData>>,
     mapping: HashMap<GraphNodeId, usize>,
     solution:
-        Option<Vec<Solution<Arc<SippState<SimpleState, MyTime>>, GraphEdgeId, MyTime, MyTime>>>,
+        Option<Vec<Solution<Arc<SippState<SimpleState, MyTime, MyTime>>, GraphEdgeId, MyTime, MyTime>>>,
     start_time: f32,
     colors: Vec<rgb::Rgb<nannou::color::encoding::Srgb, u8>>,
     limits: ((f32, f32), (f32, f32)),
@@ -92,21 +90,7 @@ fn get_model() -> Model {
         NAVY, OLIVE, LAVENDER, BROWN, BEIGE, CORAL, GREY, MAGENTA, TURQUOISE,
     ];
 
-    let pivots = Arc::new(tasks.iter().map(|t| t.goal_state.clone()).collect());
-    let heuristic_to_pivots = Arc::new(
-        tasks
-            .iter()
-            .map(|t| {
-                Arc::new(ReverseResumableAStar::new(
-                    transition_system.clone(),
-                    t.clone(),
-                    SimpleHeuristic::new(transition_system.clone(), Arc::new(t.reverse())),
-                ))
-            })
-            .collect(),
-    );
-
-    let config = CbsConfig::new(tasks, pivots, heuristic_to_pivots, OrderedFloat(1e-6), None);
+    let config: CbsConfig<SimpleWorld, SimpleState, GraphEdgeId, OrderedFloat<f64>, OrderedFloat<f64>, SimpleHeuristic> = CbsConfig::new(transition_system.clone(), tasks, OrderedFloat(1e-6), 8, None);
 
     let mut cbs = ConflictBasedSearch::new(transition_system);
 

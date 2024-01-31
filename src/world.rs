@@ -7,9 +7,9 @@ use ncollide2d::{
 };
 use tuple::A2;
 
-use cbs::{
+use caboose::{
     Graph, GraphEdgeId, GraphNodeId, Move, State,
-    TransitionSystem, MyTime, Task, Heuristic, MinimalHeuristic,
+    TransitionSystem, MyTime, Task, Heuristic, HeuristicBuilder,
 };
 
 use crate::{map::{NodeData, EdgeData}, agv::AGV};
@@ -41,7 +41,7 @@ impl SimpleWorld {
 
     pub fn get_center_and_vel(
         &self,
-        m: &Move<SimpleState, GraphEdgeId, MyTime>,
+        m: &Move<SimpleState, GraphEdgeId, MyTime, MyTime>,
         initial_time: &MyTime,
     ) -> (Point2<f64>, Vector2<f64>) {
         let interval = &m.interval;
@@ -101,7 +101,7 @@ impl TransitionSystem<SimpleState, GraphEdgeId, MyTime, MyTime> for SimpleWorld 
         true
     }
 
-    fn conflict(&self, moves: A2<&Move<SimpleState, GraphEdgeId, MyTime>>) -> bool {
+    fn conflict(&self, moves: A2<&Move<SimpleState, GraphEdgeId, MyTime, MyTime>>) -> bool {
         let initial_time = moves[0].interval.start.max(moves[1].interval.start);
         let max_time = moves[0].interval.end.min(moves[1].interval.end) - initial_time;
 
@@ -146,7 +146,7 @@ impl Heuristic<SimpleWorld, SimpleState, GraphEdgeId, MyTime, MyTime> for Simple
     }
 }
 
-impl MinimalHeuristic<SimpleWorld, SimpleState, GraphEdgeId, MyTime, MyTime> for SimpleHeuristic {
+impl HeuristicBuilder<SimpleWorld, SimpleState, GraphEdgeId, MyTime, MyTime> for SimpleHeuristic {
     fn build(transition_system: Arc<SimpleWorld>, task: Arc<Task<SimpleState, MyTime>>) -> Self {
         Self::new(transition_system, task)
     }

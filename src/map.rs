@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use cbs::{Graph, GraphNodeId};
+use caboose::{Graph, GraphNodeId};
 use serde::Deserialize;
 use quick_xml::de::{from_str, DeError};
 
